@@ -1,18 +1,24 @@
 public class fibo {
     public static void main(String[] args) {
-        int n1=2;
-        int n2=4;
-        int n3;
-        int i;
-int count=10;
+     
+        int n1 = 0;
+        int n2 = 1;
+        int temp = 0;
+        int sum = 0;
 
-        for(i=2;i<count;++i){
-            n3=n1+n2;
-            System.out.print(" "+n3);
-            n1=n2;
-            n2=n3;
-            ++i;
+        do {
+            if (n2 % 2 == 0) {
+                sum = sum + n2;
+            }
+            temp = n1 + n2;
+            n1 = n2;
+            n2 = temp;
+        } while (n2 < 4000000);
 
-        }
+        System.out.println(sum);
     }
 }
+
+        
+    
+
